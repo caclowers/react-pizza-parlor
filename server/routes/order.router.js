@@ -25,13 +25,32 @@ const OrderSchema = new Schema({
 
 const Orders = mongoose.model('Orders', OrderSchema);
 
+const dummyOrdersForAdminPage = [
+    {
+        customer: { name: 'Jimmy' },
+        time: '10/10/10',
+        type: 'Delivery',
+        order_total: 43
+    },
+    {
+        customer: { name: 'Mai Yer' },
+        time: '11/1/14',
+        type: 'Pickup',
+        order_total: 6
+    }
+]
+
 
 // GET all orders that have been placed, populate with data from the pizza collection
 router.get('/', (req, res) => {
     console.log('GET /api/order');
     // Find all orders and return them
     Orders.find({}).then((result) => {
-        res.send(result);
+
+        // don't forget to change this back to result
+        res.send(dummyOrdersForAdminPage);
+
+
     }).catch((error) => {
         console.log('Error GET /api/order', error);
         res.sendStatus(500);  
