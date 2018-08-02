@@ -12,4 +12,4 @@ class CheckoutView extends Component {
     }
 };
 
-export default CheckIn;
+export default CheckoutView;
