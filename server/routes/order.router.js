@@ -26,13 +26,15 @@ const OrderSchema = new Schema({
 const Orders = mongoose.model('Orders', OrderSchema);
 
 const dummyOrdersForAdminPage = [
-    {
+    {   
+        _id: 1,
         customer: { name: 'Jimmy' },
         time: '10/10/10',
         type: 'Delivery',
         order_total: 43
     },
     {
+        _id: 2,
         customer: { name: 'Mai Yer' },
         time: '11/1/14',
         type: 'Pickup',
