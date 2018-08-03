@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import CheckoutView from '../../views/CheckoutView.js';
 
 class App extends Component {
   render() {
@@ -13,7 +12,6 @@ class App extends Component {
         <br/>
         <img src="images/pizza_photo.png"/>
         <p>Pizza is great.</p>
-        <CheckoutView />
       </div>
     );
   }
