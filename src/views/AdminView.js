@@ -16,7 +16,8 @@ class AdminView extends Component {
     axios.get('/api/order')
     .then(response => {
       this.setState({ orders: response.data });
-    });
+    })
+    .catch(err => console.log(err));
   }
 
   renderTableRows(){
