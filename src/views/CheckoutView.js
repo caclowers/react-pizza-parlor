@@ -9,8 +9,10 @@ import axios from 'axios';
 class CheckoutView extends Component {
 
     postToDatabase = () => {
+        console.log('post to db');
+        
         // post to database
-        axios.post('/api/order', this.props.totalorder)
+        axios.post('/api/order', this.props.totalOrder)
         .then(res=>{
             // show a confirmation dialog
             alert('checkout');
