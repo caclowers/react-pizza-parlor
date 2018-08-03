@@ -20,6 +20,7 @@ this.props.dispatch(action);
         return (
             <div>
                 <li>
+                <img url={this.props.pizza.image_path}/>
                 <b>{this.props.pizza.name}</b>&nbsp;--&nbsp;
                 {this.props.pizza.description}&nbsp;--&nbsp;
                 ${this.props.pizza.cost}
