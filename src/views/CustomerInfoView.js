@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
-// import { connect } from 'react-redux'
+import { connect } from 'react-redux'
 import CustomerForm from '../components/CustomerForm/CustomerForm';
-
+import Header from '../components/Header/Header.js';
 class CustomerInfoView extends Component {
     render() {
         return (
             <main>
                 <div className="App">
-                    <header className="App-header">
-                        <h1 className="App-title">Prime Pizza</h1>
-                    </header>
+                    <Header order_total={this.props.orderTotal} />
                     <br />
-                    <img src="images/pizza_photo.png" />
+                    <img src="images/logo.jpg" alt="pizza_being_served" />
                     <CustomerForm />
                 </div>
             </main>
@@ -20,4 +17,11 @@ class CustomerInfoView extends Component {
     }
 }
 
-export default CustomerInfoView;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+      orderTotal: state.order.order_total
+    }
+  };
+
+export default connect(mapStateToProps)(CustomerInfoView);

@@ -1,21 +1,17 @@
 import React from 'react';
 
-const PizzaList = ({ pizzaInfo }) => {
-    // calculate total pizza cost:
-    const costs = pizzaInfo.map((pizza)=>{
-        return (
-            <div>
-            {pizza.cost}
-            </div>
-        )
-    })
-    const reducer = (sum,current) => sum + current;
-    const total = costs.reduce(reducer);
-
-    // map over pizzas and display data in a table
+const PizzaList = ({ pizzaInfo, total }) => {
     const pizzaListItems = pizzaInfo.map((pizza) => {
         return (
-            <div>
+            <tr key={pizza._id}>
+                <td>{pizza.name}</td>
+                <td>{pizza.cost}</td>
+            </tr>
+        )
+    });
+    return (
+        <div>
+            <table>
                 <thead>
                     <tr>
                         <th>Name</th>
@@ -23,19 +19,11 @@ const PizzaList = ({ pizzaInfo }) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr key={pizza._id}>
-                        <td>{pizza.name}</td>
-                        <td>{pizza.cost}</td>
-                    </tr>
+                    {pizzaListItems}
                 </tbody>
-            </div>
-        )
-    });
-    return (
-        <view>
-            {pizzaListItems}
+            </table>
             {total}
-        </view>
+        </div>
     )
 }
 
