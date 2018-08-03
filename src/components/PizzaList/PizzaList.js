@@ -10,6 +10,7 @@ class PizzaList extends Component {
     return (
       <ul className="App-intro">
         {pizzaListArray}
+        
       </ul>
     );
 

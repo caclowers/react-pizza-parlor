@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 
 
 class PizzaListItem extends Component {
@@ -6,6 +7,12 @@ class PizzaListItem extends Component {
 
 
 addPizzaToOrder = () => {
+console.log('addPizzaToOrder');
+const action = {
+    type: 'ADD_PIZZA_TO_ORDER',
+    payload: this.props.pizza 
+}
+this.props.dispatch(action);
 
 };
     
@@ -23,4 +30,4 @@ addPizzaToOrder = () => {
     }
 }
 
-export default PizzaListItem;
+export default connect()(PizzaListItem);
