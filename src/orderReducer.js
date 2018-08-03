@@ -31,7 +31,7 @@ const order = (state = initialState, action) => {
             const pizzaMatch = pizza => pizza._id !== action.payload._id;
             return {...state, pizzas:state.pizzas.filter(pizzaMatch)};
         case 'ADD_CUSTOMER_INFO':
-            return { ...state, customer: action.payload };
+            return { ...state, customer: action.payload, type: action.orderType };
         case 'CLEAR_ORDER':
             state = initialState;
             return state;

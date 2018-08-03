@@ -1,7 +1,6 @@
 import React from 'react';
 
 const PizzaList = ({ pizzaInfo, total }) => {
-    // map over pizzas and display data in a table
     const pizzaListItems = pizzaInfo.map((pizza) => {
         return (
             <tr key={pizza._id}>
@@ -10,7 +9,6 @@ const PizzaList = ({ pizzaInfo, total }) => {
             </tr>
         )
     });
-
     return (
         <div>
             <table>

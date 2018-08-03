@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import './App.css';
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
 import SelectView from '../../views/SelectView.js';

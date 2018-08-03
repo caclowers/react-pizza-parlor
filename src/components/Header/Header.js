@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Header = ({ headerTitle, order_total }) => {
+const Header = ({ headerTitle, order_total = '0.00' }) => {
     return (
         <header className="App-header">
             <h1 className="App-title">{headerTitle || 'Prime Pizza'}</h1>
             <img src={require('../../images/shopping_cart.png')} alt="shopping cart icon"/>
-            {order_total}
+            <p>${order_total}</p>
         </header>
     )
 }

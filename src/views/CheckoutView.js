@@ -21,7 +21,6 @@ class CheckoutView extends Component {
     }
 
     render() {
-        console.log(this.props.totalorder);
         return (
             <main>
                 <Header />
@@ -30,7 +29,7 @@ class CheckoutView extends Component {
                 <h2>Step 3: Checkout</h2>
                 <CustomerAddress customerInfo={this.props.customerData}/>
                 <h2>{this.props.type}</h2>
-                <PizzaListAndTotal pizzaInfo={this.props.pizzas} total={this.props.totalorder.order_total}/>
+                <PizzaListAndTotal pizzaInfo={this.props.pizzas} total={this.props.totalOrder.order_total}/>
                 <CheckoutButton onClick={this.postToDatabase}/>
             </main>
         )
@@ -39,7 +38,7 @@ class CheckoutView extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        totalorder: state.order,
+        totalOrder: state.order,
         pizzas: state.order.pizzas,
         customerData: state.order.customer,
         type: state.order.type
