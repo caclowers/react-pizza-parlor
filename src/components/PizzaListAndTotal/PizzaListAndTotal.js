@@ -1,8 +1,8 @@
 import React from 'react';
 
-const PizzaList = ({ data }) => {
+const PizzaList = ({ pizzaInfo }) => {
     // calculate total pizza cost:
-    const costs = data.map((pizza)=>{
+    const costs = pizzaInfo.map((pizza)=>{
         return (
             <div>
             {pizza.cost}
@@ -13,7 +13,7 @@ const PizzaList = ({ data }) => {
     const total = costs.reduce(reducer);
 
     // map over pizzas and display data in a table
-    const pizzaListItems = data.map((pizza) => {
+    const pizzaListItems = pizzaInfo.map((pizza) => {
         return (
             <div>
                 <thead>

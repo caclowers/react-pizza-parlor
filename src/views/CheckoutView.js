@@ -14,7 +14,7 @@ class CheckoutView extends Component {
                 <CustomerAddress customerInfo={this.props.customerData}/>
                 <h2>{this.props.type}</h2>
                 <PizzaListAndTotal pizzaInfo={this.props.pizzas}/>
-                <CheckoutButton />
+                <CheckoutButton orderInfo={this.props.state}/>
             </main>
         )
     }

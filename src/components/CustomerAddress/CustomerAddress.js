@@ -1,11 +1,11 @@
 import React from 'react';
 
-const CustomerAddress = ({ data }) => {
+const CustomerAddress = ({ customerInfo }) => {
     return (
         <view>
-            <p>{data.name}<br />
-                {data.street_address}<br />
-                {data.city}, MN {data.zip}</p>
+            <p>{customerInfo.name}<br />
+                {customerInfo.street_address}<br />
+                {customerInfo.city}, MN {customerInfo.zip}</p>
         </view>
     )
 }
