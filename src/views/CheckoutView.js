@@ -23,9 +23,9 @@ class CheckoutView extends Component {
     render() {
         return (
             <main>
-                <Header />
+                <Header order_total={this.props.totalOrder.order_total}/>
                 <br />
-                <img src="images/pizza_photo.png" alt="pizza_being_served"  />
+                <img src="images/logo.jpg" alt="pizza_being_served" />
                 <h2>Step 3: Checkout</h2>
                 <CustomerAddress customerInfo={this.props.customerData}/>
                 <h2>{this.props.type}</h2>
@@ -42,6 +42,7 @@ const mapStateToProps = (state) => {
         pizzas: state.order.pizzas,
         customerData: state.order.customer,
         type: state.order.type
+
     }
 };
 

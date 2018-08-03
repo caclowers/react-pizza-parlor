@@ -9,7 +9,7 @@ class CustomerInfoView extends Component {
                 <div className="App">
                     <Header order_total={this.props.orderTotal} />
                     <br />
-                    <img src="images/pizza_photo.png" alt="pizza_being_served" />
+                    <img src="images/logo.jpg" alt="pizza_being_served" />
                     <CustomerForm />
                 </div>
             </main>
