@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import './App.css';
 import { HashRouter as Router, Route, NavLink, Redirect, Switch } from 'react-router-dom';
 import SelectView from '../../views/SelectView.js';
