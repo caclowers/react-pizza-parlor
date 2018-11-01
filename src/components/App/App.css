@@ -1,7 +1,13 @@
 .App {
   text-align: center;
+  
 }
 
+html{
+  background-color: #61304B;
+  color: #EDF060;
+  /* text-shadow: 1px 1px 24px white, 3px 3px 24px white, 6px 6px 24px white; */
+}
 /* .App-header {
   background-color: #222;
   height: 70px;
@@ -10,11 +16,72 @@
 } */
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 3.5em;
+}
+
+.pizzaCard{
+  width: 30%;
+  height: 400px;
+  float: left; 
+  border: 2px solid black;
+  margin: 9px;
+  list-style-type: none;
+  position: relative;
+  box-shadow: 3px 3px 5px black;
+  transition: 0.25s;
+}
+
+.pizzaCard:hover{
+  box-shadow: 12px 12px 24px black;
+}
+
+.pizzaCard img{
+  width: 100%
+}
+
+#pizzaCardButton{
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ 
+ box-shadow: 3px 3px 5px black;
 }
 
 .App-intro {
   font-size: large;
+}
+
+#pizzaName{
+  font-size: 2em;
+}
+
+#container{
+  margin-bottom: 100px;
+}
+
+.Button{
+  color: #FB8B24;
+  height: 50px;
+  width: 150px;
+  background-color: #3D0C11;
+  font-size: 1em;
+  border:2px solid 
+}
+
+#selectViewButton{
+ 
+  float: right;
+  margin-right: 100px;
+  margin-top: 25px;
+  margin-bottom: 100px;
+  background-color: #3D0C11;
+  font-size: 2em;
+}
+
+#totalTag{
+  font-size: 2em;
+  margin-top: 0;
 }
 
 @keyframes App-logo-spin {

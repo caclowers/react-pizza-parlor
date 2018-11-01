@@ -5,6 +5,7 @@ import CustomerAddress from '../components/CustomerAddress/CustomerAddress.js';
 import PizzaListAndTotal from '../components/PizzaListAndTotal/PizzaListAndTotal.js';
 import CheckoutButton from '../components/CheckoutButton/CheckoutButton.js';
 import axios from 'axios';
+import '../../src/components/App/App.css';
 
 class CheckoutView extends Component {
 
@@ -15,7 +16,7 @@ class CheckoutView extends Component {
         axios.post('/api/order', this.props.totalOrder)
         .then(res=>{
             // show a confirmation dialog
-            alert('checkout');
+            alert('Thank for choosing Prime Pizza\!');
             this.props.dispatch({type: 'CLEAR_ORDER'}); // clear the cart 
             this.props.history.push('/select'); // navigate user back to select view
         })
@@ -27,12 +28,11 @@ class CheckoutView extends Component {
             <main>
                 <Header order_total={this.props.totalOrder.order_total}/>
                 <br />
-                <img src="images/logo.jpg" alt="pizza_being_served" />
                 <h2>Step 3: Checkout</h2>
                 <CustomerAddress customerInfo={this.props.customerData}/>
                 <h2>{this.props.type}</h2>
                 <PizzaListAndTotal pizzaInfo={this.props.pizzas} total={this.props.totalOrder.order_total}/>
-                <CheckoutButton onClick={this.postToDatabase}/>
+                <CheckoutButton className="Button" onClick={this.postToDatabase}/>
             </main>
         )
     }

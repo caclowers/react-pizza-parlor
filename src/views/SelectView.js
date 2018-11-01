@@ -38,10 +38,10 @@ class SelectView extends Component {
         <div className="App">
           <Header order_total={this.props.orderTotal} />
           <br />
-          <img src="images/logo.jpg" alt="pizza_being_served" />
-          <h1>Pizza is great!</h1>
-          <PizzaList listOfPizzas={this.state.pizzaList} />
-          <button onClick={this.pizzaClick}>NEXT</button>
+          <div id="container">
+            <PizzaList className="PizzaList" listOfPizzas={this.state.pizzaList} />
+            <button className="Button" id="selectViewButton" onClick={this.pizzaClick}>NEXT--></button>
+          </div>
         </div>
       </main>
     );
