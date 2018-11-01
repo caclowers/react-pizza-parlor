@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:5000",
   "dependencies": {
+    "atob": "^2.1.2",
     "axios": "^0.17.1",
     "deep-extend": "^0.6.0",
     "merge": "^1.2.1",
